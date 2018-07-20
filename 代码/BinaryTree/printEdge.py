@@ -10,7 +10,7 @@ def printRdge1(root):
     def getHeight(root,height=0):
         if not root:
             return height
-        return max(getHight(root.left,height + 1), getHeight(root.right, height +1))
+        return max(getHeight(root.left,height + 1), getHeight(root.right, height +1))
 
     def getMap(root, i ,map):
         if not root:
@@ -18,8 +18,8 @@ def printRdge1(root):
         if map[i][0] == None:
             map[i][0] = root
         map[i][1] = root
-        getmap(root.left, i+1, map)
-        getmap(root.right, i+1,map)
+        getMap(root.left, i+1, map)
+        getMap(root.right, i+1,map)
     
     def printLeafNotInMap(root,i,map):
         if not root:
